@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'BurbankMedium';
+  src: url('assets/fonts/burbank/BurbankBigCondTT-Medium.woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BurbankBold';
+  src: url('assets/fonts/burbank/BurbankBigCondTT-Bold.woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Définition des couleurs de marque via variables CSS */
+  --color-primary: #fcca0d;
+  --color-secondary: #ec1e24;
+
+  /* Ajout d'une police personnalisée */
+  --font-title: "BurbankBold", ui-sans-serif, system-ui;
+  --font-subtitle: "BurbankMedium", ui-sans-serif, system-ui;
+
+  /* Customisation des breakpoints */
+  --breakpoint-3xl: 1920px;
+}
+
+@layer base {
+  h1 {
+    @apply font-title text-8xl font-bold text-gray-900;
+  }
+}
